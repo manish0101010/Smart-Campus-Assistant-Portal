@@ -1,0 +1,183 @@
+.finder-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.finder-header h2 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin: 0 0 0.25rem;
+}
+
+.finder-subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.finder-subtab-bar {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.subtab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid var(--glass-border);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.25s;
+}
+.subtab-btn:hover  { background: rgba(255,255,255,0.06); color: #fff; }
+.subtab-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+.finder-success {
+    background: rgba(16,185,129,0.15);
+    border: 1px solid rgba(16,185,129,0.4);
+    color: #6ee7b7;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.finder-body {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.finder-form-panel, .finder-list-panel {
+    padding: 1.75rem;
+}
+
+.finder-form-panel h3 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0 0 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+    margin-bottom: 0.85rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.75rem 1rem;
+    background: rgba(15,23,42,0.5);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    transition: border 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.finder-submit {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.85rem;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.finder-list-panel h3 {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin: 0 0 1rem;
+}
+
+.finder-empty {
+    color: var(--text-muted);
+    text-align: center;
+    padding: 2rem;
+}
+
+.finder-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    max-height: 480px;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+}
+
+.finder-entry-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    transition: background 0.2s;
+}
+.finder-entry-card:hover { background: rgba(255,255,255,0.06); }
+
+.entry-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.entry-name {
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+.entry-tag {
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    background: rgba(79,70,229,0.15);
+    color: #a5b4fc;
+    border: 1px solid rgba(79,70,229,0.2);
+}
+
+.entry-tag.dept {
+    background: rgba(16,185,129,0.12);
+    color: #6ee7b7;
+    border-color: rgba(16,185,129,0.2);
+}
+
+@media (max-width: 900px) {
+    .finder-body { grid-template-columns: 1fr; }
+}
